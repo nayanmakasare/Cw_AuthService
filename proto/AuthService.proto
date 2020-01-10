@@ -1,0 +1,15 @@
+syntax = "proto3";
+package Cw_AuthService;
+
+message AuthRequest{
+    string uname = 1;
+    string pwd = 2;
+}
+
+message AuthResponse {
+    string token = 1;
+}
+
+service Cw_AuthService {
+    rpc Login(AuthRequest) returns (AuthResponse){}
+}
